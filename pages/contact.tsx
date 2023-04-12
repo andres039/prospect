@@ -15,12 +15,12 @@ const Contact = () => {
         Here are some places of the web where you may find more information or
         contact me:
       </p>
-<div className="grid justify-center mt-24 translate rotate-3">
+<div className="grid justify-center mt-24">
       <ul>
         <li>
           <Link
             href="https://github.com/andres039"
-            className="text-2xl mb-4 max-w-prose m-auto text-purple-400 "
+            className="text-2xl mb-4 max-w-prose m-auto text-slate-200 hover:underline"
           >
             Github
           </Link>
@@ -28,7 +28,7 @@ const Contact = () => {
         <li>
           <Link
             href="linkedin.com/in/andresbeltrangarcia/"
-            className="text-emerald-400 text-2xl mb-4 max-w-prose m-auto"
+            className="hover:underline text-slate-200 text-2xl mb-4 max-w-prose m-auto"
           >
             LinkedIn
           </Link>
@@ -36,7 +36,7 @@ const Contact = () => {
         <li>
           <Link
             href="https://andres039.hashnode.dev/fetch-con-typescript"
-            className="text-red-600 text-2xl mb-4 max-w-prose m-auto"
+            className="hover:underline text-slate-200 text-2xl mb-4 max-w-prose m-auto"
           >
             HashNode
           </Link>
@@ -44,7 +44,7 @@ const Contact = () => {
         <li>
           <Link
             href="mailto:andres039039@hotmail.com"
-            className="text-yellow-600 text-2xl mb-4 max-w-prose m-auto"
+            className="hover:underline text-slate-200 text-2xl mb-4 max-w-prose m-auto"
           >
             Email
           </Link>
