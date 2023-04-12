@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Contact = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 px-10">
       <h2 className="text-center text-4xl font-semibold text-yellow-400 mb-12 transfrom -rotate-2">
         Contact me!
       </h2>
