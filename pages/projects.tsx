@@ -33,7 +33,7 @@ const Projects = () => {
           image={project.image}
           description={project.description}
           name={project.name}
-          link={project.live || ""}
+          link={project.live}
           key={project.name}
           href={project.href}
           source={project.source}

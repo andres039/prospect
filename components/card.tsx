@@ -23,7 +23,7 @@ export const Card = ({ image, name, link, description, source }: CardProps) => {
         />
       </a>
       <div className="p-5">
-        <a href="#">
+       {link &&  (<><a href="#">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {name}
           </h5>
@@ -33,7 +33,7 @@ export const Card = ({ image, name, link, description, source }: CardProps) => {
         </p>
         <a
           href={link}
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="mr-3 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Live
           <svg
@@ -49,10 +49,10 @@ export const Card = ({ image, name, link, description, source }: CardProps) => {
               clip-rule="evenodd"
             ></path>
           </svg>
-        </a>
+        </a></>)}
         <a
           href={source}
-          className="inline-flex mx-6 items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="inline-flex  items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Code
           <svg
