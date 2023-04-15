@@ -19,7 +19,7 @@ const About = () => {
       </p>
       <p className="text-slate-100 text-2xl mb-4 max-w-prose m-auto indent-8">
         {" "}
-        I currently contribute whenever I can to{" "}
+        I currently contribute to{" "}
         <Link
           href="https://greenstand.org/"
           target="_blank"
