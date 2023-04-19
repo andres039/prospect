@@ -1,21 +1,56 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+
+interface Data {
+  title: string;
+  p1: string;
+  p2: {
+    text1: string;
+    link: {
+      name: string;
+      href: string;
+    };
+    text2: string;
+    link2: {
+      name: string;
+      href: string;
+    };
+    text3: string;
+  };
+}
 const About = () => {
+  const [titulo, setTitulo] = React.useState("");
+
+  const getTitle = async (): Promise<Data> => {
+    const url = process.env.NEXT_PUBLIC_SERVER;
+    console.log("url", url);
+    const data = await fetch(url as string);
+    const finalData = await data.json();
+    return finalData;
+  };
+
+  React.useEffect(() => {
+    getTitle().then((data) => setTitulo(data.title));
+  }, []);
+
   return (
     <div className="p-10 lg:px-60 py-20 flex-col">
- <div className="relative">
-  <div className="absolute top-0 left-0 animate-fall text-4xl" style={{left: "calc(90vw * (Math.random() - 0.5))"}}>
-👋
-  </div>
-</div>
+      <div className="relative">
+        <div
+          className="absolute top-0 left-0 animate-fall text-4xl"
+          style={{ left: "calc(90vw * (Math.random() - 0.5))" }}
+        >
+          👋
+        </div>
+      </div>
       <h2 className="text-center text-4xl font-semibold text-yellow-400 mb-12 transfrom -rotate-2">
-        A Web Developer
+        {titulo}
       </h2>
       <p className="text-slate-100 text-2xl mb-4 max-w-prose m-auto indent-8 ">
-        Hi. My name is Andr&eacute;s Beltr&aacute;n. I&apos;m a Web developer with a
-        background in Philosophy. I aim to write code that is easy to understand
-        and to integrate to existing codebases.
+        Hi. My name is Andr&eacute;s Beltr&aacute;n. I&apos;m a Web developer
+        with a background in Philosophy. I aim to write code that is easy to
+        understand and to integrate to existing codebases.
       </p>
       <p className="text-slate-100 text-2xl mb-4 max-w-prose m-auto indent-8">
         {" "}
