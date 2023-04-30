@@ -26,7 +26,8 @@
     "name": "Point Of Sale",
     "href": "/projects/pos application",
     "image": "https://ik.imagekit.io/4p3voulmt/Andres/images/usuarios.png?updatedAt=1681167912046",
-    "source": "https://github.com/andres039/POS-Frontend",
-    "description": "A point of sale application for a pharmacy in Panama, built with React, Bootstrap and Bulma."
+    "source": "https://github.com/andres039/pos",
+    "description": "A point of sale application for a pharmacy in Panama, built with React, Bootstrap and Bulma.",
+    "live": "https://pos-7lr863pf6-andres039.vercel.app/"
   }
 ]

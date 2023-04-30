@@ -22,16 +22,17 @@ interface Data {
 const About = () => {
   const [titulo, setTitulo] = React.useState("");
 
-  const getTitle = async (): Promise<Data> => {
-    const url = process.env.NEXT_PUBLIC_SERVER;
-    console.log("url", url);
-    const data = await fetch(url as string);
-    const finalData = await data.json();
-    return finalData;
-  };
-
   React.useEffect(() => {
-    getTitle().then((data) => setTitulo(data.title));
+    const getTitle = async (): Promise<Data> => {
+      const url = process.env.NEXT_PUBLIC_SERVER;
+      const data = await fetch(url as string);
+      const finalData = await data.json();
+      return finalData;
+    };
+
+    getTitle()
+      .then((data) => setTitulo(data.title))
+      .catch((reason) => console.error(reason));
   }, []);
 
   return (
